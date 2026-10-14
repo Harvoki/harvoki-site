@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <!-- a sprig of three shaded leaves on a thin stem -->
+  <defs>
+    <linearGradient id="lf" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#b6e36a"/>
+      <stop offset=".45" stop-color="#5fae32"/>
+      <stop offset="1" stop-color="#2f6d1c"/>
+    </linearGradient>
+    <linearGradient id="lf2" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#a5d95c"/>
+      <stop offset=".5" stop-color="#4f9a2a"/>
+      <stop offset="1" stop-color="#265a16"/>
+    </linearGradient>
+    <filter id="sh" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2.5" stdDeviation="2" flood-color="#1a0c04" flood-opacity=".45"/>
+    </filter>
+  </defs>
+  <g filter="url(#sh)">
+    <path d="M60 116 C58 92 57 70 62 44" stroke="#4a6b1f" stroke-width="3.2" fill="none" stroke-linecap="round"/>
+    <!-- left leaf -->
+    <path d="M59 86 C40 86 22 74 14 52 C34 52 52 62 59 86Z" fill="url(#lf2)"/>
+    <path d="M59 86 C46 76 30 64 16 53" stroke="#d8f5a8" stroke-opacity=".7" stroke-width="1.4" fill="none"/>
+    <path d="M44 76 l-6 -9 M35 69 l-7 -6 M50 81 l-3 -7" stroke="#d8f5a8" stroke-opacity=".45" stroke-width=".9" fill="none"/>
+    <!-- right leaf -->
+    <path d="M61 70 C80 72 100 60 108 38 C86 38 68 48 61 70Z" fill="url(#lf)"/>
+    <path d="M61 70 C76 60 92 49 106 39" stroke="#e4fbbf" stroke-opacity=".7" stroke-width="1.4" fill="none"/>
+    <path d="M76 60 l5 -9 M86 54 l7 -7 M70 65 l3 -7" stroke="#e4fbbf" stroke-opacity=".45" stroke-width=".9" fill="none"/>
+    <!-- top leaf -->
+    <path d="M62 46 C52 34 50 18 60 4 C72 18 72 34 62 46Z" fill="url(#lf)"/>
+    <path d="M62 46 C60 32 60 18 60 6" stroke="#e4fbbf" stroke-opacity=".75" stroke-width="1.3" fill="none"/>
+  </g>
+</svg>
