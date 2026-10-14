@@ -1,4 +1,4 @@
-import{f as o,s as i,l as s,a as t}from"./lang-DoAPFn8c.js";const k=[{id:"start",icon:"🌱",title:"Getting started",body:`
+import"./modulepreload-polyfill-B5Qt9EMX.js";import{f as o,s as i,l as s,a as t}from"./lang-Dbdv5-0t.js";const k=[{id:"start",icon:"🌱",title:"Getting started",body:`
     <p>Harvoki is a multiplayer farming RPG. Every player gets their own island; towns, workshops, mines and the Wilds are shared with everyone.</p>
     <ol><li>Create an account and design your character.</li><li>Press <kbd>G</kbd> to open <b>First Steps</b> — a checklist that walks you through every corner of the game.</li>
     <li>Buy seeds from the grocer in town, till your field with the hoe, plant, water and harvest.</li><li>Deliver orders from the <b>Task Board</b> in your house: this is how you earn gold and tokens.</li></ol>`},{id:"controls",icon:"🎮",title:"Controls",body:`

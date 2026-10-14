@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Harvoki Yönetim</title>
+    <link rel="icon" href="/site/carrot.png" />
+    <script type="module" crossorigin src="/_app/admin-BQiZNXkV.js"></script>
+    <link rel="modulepreload" crossorigin href="/_app/modulepreload-polyfill-B5Qt9EMX.js">
+    <link rel="stylesheet" crossorigin href="/_app/admin-k6_CpcGC.css">
+  </head>
+  <body class="adm">
+    <!-- key gate -->
+    <form class="gate" id="gate">
+      <div class="gate-card">
+        <div class="brand">Harvoki <span>Yönetim</span></div>
+        <label for="key">Yönetici anahtarı</label>
+        <input id="key" type="password" autocomplete="current-password" placeholder="ADMIN_KEY" />
+        <p class="err" id="gate-err"></p>
+        <button type="submit">Giriş</button>
+      </div>
+    </form>
+
+    <div class="app" id="app" hidden>
+      <aside class="side">
+        <div class="brand">Harvoki <span>Yönetim</span></div>
+        <nav id="tabs">
+          <button data-tab="waitlist" class="wl-tab">📝 Waitlist</button>
+          <button data-tab="overview" class="on game">📊 Genel bakış</button>
+          <button data-tab="players" class="game">👥 Oyuncular</button>
+          <button data-tab="activity" class="game">📜 Aktivite</button>
+          <button data-tab="chat" class="game">💬 Sohbet</button>
+        </nav>
+        <div class="side-foot">
+          <label class="auto"><input type="checkbox" id="auto" checked /> Otomatik yenile</label>
+          <button class="ghost" id="logout">Çıkış</button>
+        </div>
+      </aside>
+
+      <main class="main">
+        <!-- waitlist (Supabase) -->
+        <section data-view="waitlist" hidden>
+          <h1>Waitlist</h1>
+          <div class="kpis" id="wl-kpis"></div>
+          <div class="card" style="margin-top:16px"><h2>Kayıt hunisi <span class="muted" style="font-weight:600">siteye giren → listeye giren</span></h2><div class="bars" id="wl-funnel"></div></div>
+          <div class="toolbar" style="margin-top:16px">
+            <input id="wl-q" placeholder="X adı ya da cüzdan ara…" />
+            <button class="ghost" id="wl-csv">⬇ CSV indir</button>
+          </div>
+          <div class="card"><table class="tbl" id="wl-table"></table></div>
+        </section>
+
+        <!-- overview -->
+        <section data-view="overview">
+          <h1>Genel bakış</h1>
+          <div class="kpis" id="kpis"></div>
+          <div class="grid2">
+            <div class="card"><h2>Şu an oyunda <span class="pill" id="online-n">0</span></h2><table class="tbl" id="online"></table></div>
+            <div class="card"><h2>Son 24 saatte yapılanlar</h2><div class="bars" id="events"></div></div>
+          </div>
+        </section>
+
+        <!-- players -->
+        <section data-view="players" hidden>
+          <h1>Oyuncular</h1>
+          <div class="toolbar">
+            <input id="p-q" placeholder="Kullanıcı adı ya da karakter ara…" />
+            <select id="p-sort">
+              <option value="seen">Son görülme</option>
+              <option value="created">Kayıt tarihi</option>
+              <option value="level">Toplam seviye</option>
+              <option value="gold">Altın</option>
+              <option value="token">Token</option>
+            </select>
+          </div>
+          <div class="card"><table class="tbl click" id="players"></table></div>
+        </section>
+
+        <!-- activity -->
+        <section data-view="activity" hidden>
+          <h1>Aktivite</h1>
+          <div class="toolbar">
+            <input id="a-q" placeholder="Oyuncu adı…" />
+            <select id="a-ev"><option value="">Tüm olaylar</option></select>
+          </div>
+          <div class="card"><table class="tbl" id="activity"></table><button class="ghost more" id="a-more">Daha eski</button></div>
+        </section>
+
+        <!-- chat -->
+        <section data-view="chat" hidden>
+          <h1>Sohbet</h1>
+          <div class="card"><div class="chatlog" id="chatlog"></div></div>
+        </section>
+      </main>
+    </div>
+
+    <!-- player drawer -->
+    <div class="drawer" id="drawer" hidden>
+      <div class="drawer-bg" id="drawer-bg"></div>
+      <div class="drawer-panel" id="drawer-panel"></div>
+    </div>
+  </body>
+</html>
