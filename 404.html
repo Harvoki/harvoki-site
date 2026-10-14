@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Harvoki — Erken Erişim</title>
+    <meta name="description" content="Harvoki erken erişim listesine katıl: X hesabını bağla, görevleri tamamla, cüzdanını imzala." />
+    <link rel="icon" href="/site/carrot.png" />
+    <script type="module" crossorigin src="/_app/waitlist-HyTid1Ho.js"></script>
+    <link rel="modulepreload" crossorigin href="/_app/lang-CuyBDlcj.js">
+    <link rel="stylesheet" crossorigin href="/_app/lang-D_7rVOzC.css">
+  </head>
+  <body class="site">
+    <!-- text is filled by data-st key from site-i18n.ts; the Turkish here is the no-JS fallback -->
+    <header class="topbar" id="topbar">
+      <a class="topbar-logo" href="#top">Harvoki</a>
+      <nav class="topnav">
+        <a href="#how" data-st="nav.how">Nasıl oynanır</a>
+        <a href="#world" data-st="nav.features">Dünya</a>
+        <a href="/docs" data-st="nav.docs">Docs</a>
+      </nav>
+      <div class="topbar-right">
+        <span id="lang-slot"></span>
+        <a class="btn-gold small" href="#join" data-st="nav.join">Listeye katıl</a>
+      </div>
+    </header>
+
+    <section class="hero" id="top">
+      <div class="hero-sky"></div>
+      <div class="hero-grid">
+      <div class="hero-inner">
+        <p class="eyebrow" data-st="hero.eyebrow">Robinhood Chain üzerinde çok oyunculu çiftlik RPG’si</p>
+        <div class="sign sign-logo">
+          <span class="leaf l1">🌿</span><span class="leaf l2">🌾</span><span class="leaf l3">🍃</span>
+          <h1 class="logo">Harvoki</h1>
+        </div>
+        <div class="sign sign-ribbon"><span data-st="hero.slogan">Kendi çiftliğini kur, geleceğini yeşert!</span></div>
+        <p class="hero-lede" data-st="hero.lede"></p>
+        <div class="hero-actions">
+          <a class="btn-gold big" href="#join" data-st="hero.cta">Listeye katıl</a>
+          <a class="btn-ghost" href="#how" data-st="hero.how">Nasıl oynanır</a>
+        </div>
+        <p class="count-pill"><img src="/site/coin.png" alt="" /> <span id="count">…</span></p>
+      </div>
+        <figure class="hero-art" aria-hidden="true"><div class="crop crop-hero"></div></figure>
+      </div>
+      <div class="scroll-hint" aria-hidden="true">⌄</div>
+    </section>
+
+    <main>
+      <section class="band band-join" id="join">
+        <div class="wrap">
+          <h2 class="sec-title"><span class="sprig">🌿</span> <span data-st="join.title">Erken erişim</span> <span class="sprig">🌿</span></h2>
+          <p class="sec-sub" data-st="join.sub"></p>
+          <p class="dev-badge" id="dev-badge" hidden data-st="join.dev"></p>
+
+          <ol class="progress" aria-hidden="true">
+            <li data-p="1"><b>1</b><span data-st="s1.title"></span></li>
+            <li data-p="2"><b>2</b><span data-st="s2.title"></span></li>
+            <li data-p="3"><b>3</b><span data-st="s3.title"></span></li>
+          </ol>
+
+          <div class="steps" id="steps">
+            <!-- step 1 -->
+            <article class="step panel-wood" id="step1">
+              <header class="step-head">
+                <span class="step-n">1</span>
+                <div><small class="step-k"></small><h3 data-st="s1.title"></h3></div>
+                <span class="step-ok">✓</span>
+              </header>
+              <p class="step-desc" data-st="s1.desc"></p>
+              <div class="step-body" id="x-body">
+                <a class="btn-x" id="x-connect" href="/api/wl/x/start"><span class="x-glyph">𝕏</span> <span data-st="s1.btn"></span></a>
+                <form class="dev-x" id="dev-x" hidden>
+                  <div class="wl-prefix"><span>@</span><input id="dev-handle" maxlength="15" data-st-ph="s1.devPh" autocomplete="off" spellcheck="false" /></div>
+                  <button class="btn-x" type="submit" data-st="s1.devBtn"></button>
+                </form>
+                <div class="x-user" id="x-user" hidden>
+                  <span class="x-avatar">𝕏</span>
+                  <strong id="x-name"></strong>
+                  <button type="button" class="link-btn" id="x-change" data-st="s1.change"></button>
+                </div>
+              </div>
+              <p class="step-err" id="err1" role="alert"></p>
+            </article>
+
+            <!-- step 2 -->
+            <article class="step panel-wood locked" id="step2">
+              <header class="step-head">
+                <span class="step-n">2</span>
+                <div><small class="step-k"></small><h3 data-st="s2.title"></h3></div>
+                <span class="step-ok">✓</span>
+              </header>
+              <p class="step-desc" data-st="s2.desc"></p>
+              <p class="step-lock" data-st="s2.locked"></p>
+              <ul class="tasks" id="tasks">
+                <li class="task" data-task="follow">
+                  <span class="task-ico">👤</span>
+                  <div class="task-text"><strong id="follow-title"></strong><span data-st="task.follow.d"></span></div>
+                  <a class="btn-mini" data-open="follow" target="_blank" rel="noopener" data-st="task.open"></a>
+                  <button type="button" class="btn-mini green" data-verify="follow" data-st="task.verify"></button>
+                </li>
+                <li class="task" data-task="like">
+                  <span class="task-ico">❤️</span>
+                  <div class="task-text"><strong data-st="task.like"></strong><span data-st="task.like.d"></span></div>
+                  <a class="btn-mini" data-open="like" target="_blank" rel="noopener" data-st="task.open"></a>
+                  <button type="button" class="btn-mini green" data-verify="like" data-st="task.verify"></button>
+                </li>
+                <li class="task" data-task="quote">
+                  <span class="task-ico">🔁</span>
+                  <div class="task-text"><strong data-st="task.quote"></strong><span data-st="task.quote.d"></span></div>
+                  <a class="btn-mini" data-open="quote" target="_blank" rel="noopener" data-st="task.open"></a>
+                  <button type="button" class="btn-mini green" data-verify="quote" data-st="task.verify"></button>
+                </li>
+                <li class="task" data-task="reply">
+                  <span class="task-ico">💬</span>
+                  <div class="task-text"><strong data-st="task.reply"></strong><span data-st="task.reply.d"></span></div>
+                  <a class="btn-mini" data-open="reply" target="_blank" rel="noopener" data-st="task.open"></a>
+                  <button type="button" class="btn-mini green" data-verify="reply" data-st="task.verify"></button>
+                </li>
+              </ul>
+              <p class="step-err" id="err2" role="alert"></p>
+            </article>
+
+            <!-- step 3 -->
+            <article class="step panel-wood locked" id="step3">
+              <header class="step-head">
+                <span class="step-n">3</span>
+                <div><small class="step-k"></small><h3 data-st="s3.title"></h3></div>
+                <span class="step-ok">✓</span>
+              </header>
+              <p class="step-desc" data-st="s3.desc"></p>
+              <p class="step-lock" data-st="s3.locked"></p>
+              <div class="step-body">
+                <button type="button" class="btn-gold" id="wallet-btn"><span>🦊</span> <span data-st="s3.btn"></span></button>
+                <p class="safe-note">🔒 <span data-st="s3.safe"></span></p>
+              </div>
+              <p class="step-err" id="err3" role="alert"></p>
+            </article>
+          </div>
+
+          <article class="done panel-wood" id="done" hidden>
+            <div class="confetti" aria-hidden="true">🌾 🥕 🍓 🌻 🐔</div>
+            <h3 data-st="done.title"></h3>
+            <p class="done-place"><span data-st="done.place"></span> <b id="place">#0</b></p>
+            <p class="done-wallet" id="done-wallet"></p>
+            <p class="muted" data-st="done.sub"></p>
+            <a class="btn-x" id="share" target="_blank" rel="noopener"><span class="x-glyph">𝕏</span> <span data-st="done.share"></span></a>
+          </article>
+        </div>
+      </section>
+
+      <section class="band band-how" id="how">
+        <div class="wrap">
+          <h2 class="sec-title" data-st="how.title"></h2>
+          <p class="sec-sub" data-st="how.sub"></p>
+          <div class="cards">
+            <article class="card"><img src="/site/carrot.png" alt="" /><h3 data-st="how.1"></h3><p data-st="how.1.d"></p></article>
+            <article class="card"><img src="/site/small-cow-milk.png" alt="" /><h3 data-st="how.2"></h3><p data-st="how.2.d"></p></article>
+            <article class="card"><img src="/site/carp.png" alt="" /><h3 data-st="how.3"></h3><p data-st="how.3.d"></p></article>
+            <article class="card"><img src="/site/sword.png" alt="" /><h3 data-st="how.4"></h3><p data-st="how.4.d"></p></article>
+            <article class="card"><img src="/site/apple-pie.png" alt="" /><h3 data-st="how.5"></h3><p data-st="how.5.d"></p></article>
+            <article class="card"><img src="/site/coin.png" alt="" /><h3 data-st="how.6"></h3><p data-st="how.6.d"></p></article>
+          </div>
+
+          <div class="keys panel-wood">
+            <h3 data-st="keys.title"></h3>
+            <ul class="keylist">
+              <li><span><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd></span><em data-st="keys.move"></em></li>
+              <li><span><kbd>Space</kbd></span><em data-st="keys.use"></em></li>
+              <li><span><kbd>E</kbd></span><em data-st="keys.interact"></em></li>
+              <li><span><kbd>F</kbd></span><em data-st="keys.attack"></em></li>
+              <li><span><kbd>I</kbd></span><em data-st="keys.bag"></em></li>
+              <li><span><kbd>K</kbd></span><em data-st="keys.skills"></em></li>
+              <li><span><kbd>M</kbd></span><em data-st="keys.map"></em></li>
+              <li><span><kbd>G</kbd></span><em data-st="keys.guide"></em></li>
+              <li><span><kbd>P</kbd></span><em data-st="keys.pets"></em></li>
+              <li><span><kbd>H</kbd></span><em data-st="keys.help"></em></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="band band-world" id="world">
+        <div class="wrap">
+          <h2 class="sec-title" data-st="feat.title"></h2>
+          <p class="sec-sub" data-st="feat.sub"></p>
+          <div class="world">
+            <div class="world-art crop crop-world" aria-hidden="true"></div>
+            <ul class="feats">
+              <li><b>⭐</b><div><h3 data-st="feat.1"></h3><p data-st="feat.1.d"></p></div></li>
+              <li><b>🐾</b><div><h3 data-st="feat.2"></h3><p data-st="feat.2.d"></p></div></li>
+              <li><b>🏹</b><div><h3 data-st="feat.3"></h3><p data-st="feat.3.d"></p></div></li>
+              <li><b>🪙</b><div><h3 data-st="feat.4"></h3><p data-st="feat.4.d"></p></div></li>
+            </ul>
+          </div>
+          <p class="center"><a class="btn-gold" href="/docs"><span>📖</span> <span data-st="foot.docs"></span></a></p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-foot">
+      <div class="topbar-logo">Harvoki</div>
+      <nav><a href="#how" data-st="nav.how"></a><a href="/docs" data-st="nav.docs"></a><a id="foot-x" target="_blank" rel="noopener">𝕏</a></nav>
+      <small data-st="foot.credit"></small>
+    </footer>
+  </body>
+</html>
